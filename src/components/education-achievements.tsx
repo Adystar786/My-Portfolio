@@ -62,9 +62,9 @@ export function EducationAchievements() {
                       <Award className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-2">AI Innovation Portfolio</h3>
+                      <h3 className="font-semibold text-foreground mb-2">AI Portfolio Development</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Built multiple AI assistants spanning health, academic, travel, and lifestyle domains
+                        Successfully built and deployed multiple AI chatbots, machine learning applications, and data science solutions across various domains
                       </p>
                       <div className="flex flex-wrap gap-1">
                         {["Furina AI", "Marvin", "Raiden AI", "TripStar AI"].map((project) => (
@@ -85,11 +85,11 @@ export function EducationAchievements() {
                       <GraduationCap className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-2">Erasmus Mundus Pre-Assessment</h3>
+                      <h3 className="font-semibold text-foreground mb-2">Advanced AI & ML Studies</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Successfully accepted into the pre-assessment phase for competitive European Master's program
+                        Pursuing advanced studies in Artificial Intelligence and Machine Learning for specialized expertise in AI development
                       </p>
-                      <Badge className="bg-success text-success-foreground">Accepted</Badge>
+                      <Badge className="bg-success text-success-foreground">Planning</Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -102,9 +102,9 @@ export function EducationAchievements() {
                       <Award className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-2">Entrepreneurial Development</h3>
+                      <h3 className="font-semibold text-foreground mb-2">Web Development Projects</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Developed and launched multiple e-commerce platforms with modern web technologies
+                        Developed and launched multiple e-commerce platforms and personal portfolio websites using modern web development technologies
                       </p>
                       <div className="flex flex-wrap gap-1">
                         {["Shroom's Rain Cloud", "NeoBands", "Matrix Webpage"].map((project) => (

@@ -13,8 +13,10 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBackground} 
-          alt="" 
+          alt="AI Developer Portfolio - Adnan's professional background showcasing machine learning and web development expertise" 
           className="w-full h-full object-cover opacity-20 dark:opacity-10"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background/70" />
       </div>
@@ -52,11 +54,11 @@ export function HeroSection() {
           
           <h2 className="text-xl md:text-3xl font-light text-foreground mb-8 max-w-4xl mx-auto leading-relaxed tracking-wide">
             <span className="code-style text-muted-foreground">name:</span> 
-            <span className="text-primary">"Software Engineer"</span><span className="text-muted-foreground">,</span><br/>
-            <span className="code-style text-muted-foreground">focus:</span> 
-            <span className="gradient-text font-medium">["AI Companions", "Intelligent Apps", "Creative Experiences"]</span><span className="text-muted-foreground">,</span><br/>
-            <span className="code-style text-muted-foreground">passion:</span> 
-            <span className="text-primary">"Human-centered technology"</span>
+            <span className="text-primary">"AI Developer & Machine Learning Engineer"</span><span className="text-muted-foreground">,</span><br/>
+            <span className="code-style text-muted-foreground">expertise:</span> 
+            <span className="gradient-text font-medium">["AI Chatbots", "Data Science Projects", "Creative Web Applications"]</span><span className="text-muted-foreground">,</span><br/>
+            <span className="code-style text-muted-foreground">mission:</span> 
+            <span className="text-primary">"Building intelligent solutions with human-centered design"</span>
           </h2>
           
           <div className="mb-8 animate-slide-in-right">
@@ -66,7 +68,7 @@ export function HeroSection() {
           </div>
           
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Computer Science graduate specializing in AI, Data Science, and human-centered technology.
+            Computer Science graduate specializing in Artificial Intelligence, Machine Learning, Data Science, and modern web development technologies.
           </p>
         </div>
         

@@ -29,13 +29,13 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-muted-foreground">
-                © 2024 Adnan. Built with passion and cutting-edge technology.
+                © 2024 <strong className="text-foreground">Adnan</strong> — AI Developer & Machine Learning Engineer. Crafting intelligent solutions with passion.
               </p>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-sm text-muted-foreground">Made with</span>
+              <span className="text-sm text-muted-foreground">Built with</span>
               <span className="text-primary">♥</span>
-              <span className="text-sm text-muted-foreground">using React & AI</span>
+              <span className="text-sm text-muted-foreground">using React, AI & modern web technologies</span>
             </div>
           </div>
         </div>

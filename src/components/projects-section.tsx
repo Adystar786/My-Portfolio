@@ -7,35 +7,42 @@ export function ProjectsSection() {
   const aiProjects = [
     {
       title: "Furina AI",
-      subtitle: "Mental Health Companion",
-      description: "An AI that listens, supports, and tracks moods to promote mental well-being.",
+      subtitle: "Mental Health AI Companion",
+      description: "An intelligent AI chatbot that listens, provides emotional support, and tracks mood patterns to promote mental well-being through natural language processing and machine learning algorithms.",
       icon: <Brain className="h-6 w-6" />,
-      tech: ["Python", "NLP", "TensorFlow", "Firebase"],
+      tech: ["Python", "NLP", "TensorFlow", "Firebase", "Machine Learning"],
       status: "Live",
-      featured: true
+      featured: true,
+      schema: {
+        "@type": "SoftwareApplication",
+        "name": "Furina AI",
+        "description": "AI-powered mental health companion using machine learning",
+        "applicationCategory": "HealthApplication",
+        "programmingLanguage": ["Python", "TensorFlow"]
+      }
     },
     {
       title: "Marvin",
-      subtitle: "Virtual Assistant with Object Detection",
-      description: "Your voice-controlled assistant that can also see the world around it.",
+      subtitle: "AI Assistant with Computer Vision",
+      description: "Voice-controlled AI assistant with advanced object detection capabilities, combining speech recognition with computer vision for intelligent environment interaction.",
       icon: <Eye className="h-6 w-6" />,
-      tech: ["Python", "OpenCV", "Speech Recognition", "Computer Vision"],
+      tech: ["Python", "OpenCV", "Speech Recognition", "Computer Vision", "AI"],
       status: "Live"
     },
     {
       title: "Raiden AI",
-      subtitle: "Academic Assistant",
-      description: "AI to help students organize resources, answer questions, and summarize content.",
+      subtitle: "Academic AI Assistant",
+      description: "Intelligent academic support AI that helps students organize study resources, answer complex questions, and summarize educational content using advanced NLP techniques.",
       icon: <BookOpen className="h-6 w-6" />,
-      tech: ["Python", "NLP", "Flask", "SQLite"],
+      tech: ["Python", "NLP", "Flask", "SQLite", "Machine Learning"],
       status: "Live"
     },
     {
       title: "TripStar AI",
-      subtitle: "Travel Itinerary Generator",
-      description: "Smart, AI-powered travel planning tailored to your preferences.",
+      subtitle: "Smart Travel Itinerary Generator",
+      description: "AI-powered travel planning application that creates personalized itineraries based on user preferences, budget, and interests using machine learning algorithms.",
       icon: <MapPin className="h-6 w-6" />,
-      tech: ["React", "Python", "OpenAI API", "Firebase"],
+      tech: ["React", "Python", "OpenAI API", "Firebase", "Data Science"],
       status: "In Progress"
     },
     {
@@ -51,18 +58,18 @@ export function ProjectsSection() {
   const webProjects = [
     {
       title: "Shroom's Rain Cloud",
-      subtitle: "Ecommerce Platform",
-      description: "Beautiful ecommerce site for artistic lamps with modern design and seamless UX.",
+      subtitle: "E-commerce Platform",
+      description: "Beautiful responsive e-commerce website for artistic lighting products, featuring modern web development with seamless user experience and secure payment integration.",
       icon: <ShoppingBag className="h-6 w-6" />,
-      tech: ["React", "Node.js", "Stripe", "MongoDB"],
+      tech: ["React", "Node.js", "Stripe", "MongoDB", "Web Development"],
       status: "Live"
     },
     {
       title: "NeoBands",
-      subtitle: "Wearables Shop",
-      description: "Modern ecommerce platform for cutting-edge wearable technology.",
+      subtitle: "Wearable Tech E-commerce",
+      description: "Modern e-commerce platform specializing in cutting-edge wearable technology, built with React and featuring advanced web development techniques.",
       icon: <Zap className="h-6 w-6" />,
-      tech: ["React", "Firebase", "Tailwind CSS", "Payment Gateway"],
+      tech: ["React", "Firebase", "Tailwind CSS", "Payment Gateway", "Web Development"],
       status: "Live"
     },
     {
@@ -172,11 +179,12 @@ export function ProjectsSection() {
             </span>
           </div>
           <h2 className="text-5xl md:text-7xl font-bold mb-8 shimmer-text font-heading">
-            MY WORK
+            AI PORTFOLIO
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A curated collection of <span className="text-primary font-semibold">AI-powered solutions</span> and 
-            <span className="text-primary font-semibold"> creative web experiences</span> that push the boundaries of technology.
+            A curated collection of <span className="text-primary font-semibold">AI-powered solutions</span>, 
+            <span className="text-primary font-semibold"> machine learning projects</span>, and 
+            <span className="text-primary font-semibold"> creative web development applications</span> showcasing expertise in artificial intelligence and modern web technologies.
           </p>
           <div className="flex justify-center mt-8">
             <div className="w-32 h-1 bg-gradient-primary rounded-full" />
@@ -191,10 +199,10 @@ export function ProjectsSection() {
             </div>
             <div>
               <h3 className="text-3xl font-bold text-foreground font-heading">
-                AI & Machine Learning
+                AI & Machine Learning Projects
               </h3>
               <p className="text-muted-foreground code-style text-sm">
-                // Intelligent solutions for real-world problems
+                // Intelligent AI chatbots and data science solutions
               </p>
             </div>
           </div>
@@ -215,10 +223,10 @@ export function ProjectsSection() {
             </div>
             <div>
               <h3 className="text-3xl font-bold text-foreground font-heading">
-                Web Applications & Platforms
+                Web Development Projects
               </h3>
               <p className="text-muted-foreground code-style text-sm">
-                // Modern web experiences with cutting-edge design
+                // Modern e-commerce platforms and creative web applications
               </p>
             </div>
           </div>
