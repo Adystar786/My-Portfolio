@@ -21,33 +21,35 @@ export function Navigation() {
   }
 
   const navItems = [
-    { label: "About", id: "about" },
-    { label: "Projects", id: "projects" },
-    { label: "Skills", id: "skills" },
-    { label: "Contact", id: "contact" },
+    { label: "// about", id: "about" },
+    { label: "// work", id: "projects" },
+    { label: "// expertise", id: "skills" },
+    { label: "// experience", id: "education" },
+    { label: "// contact", id: "contact" },
   ]
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-background/90 backdrop-blur-lg border-b border-border/50' : 'bg-transparent'
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      scrolled ? 'bg-background/90 backdrop-blur-xl border-b border-border/30' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('hero')}
-            className="text-xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
+            className="text-xl font-bold code-style hover:scale-105 transition-all duration-300 hover:text-primary"
           >
-            Adnan
+            Adnan._
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-foreground transition-colors animated-underline"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 animated-underline code-style text-sm font-medium"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.label}
               </button>

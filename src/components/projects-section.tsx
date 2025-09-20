@@ -76,57 +76,84 @@ export function ProjectsSection() {
   ]
 
   const ProjectCard = ({ project, index }: { project: any, index: number }) => (
-    <Card className={`group relative overflow-hidden border-border/50 hover:border-primary/50 transition-all duration-500 card-hover ${
-      project.featured ? 'ring-2 ring-primary/20' : ''
-    }`} style={{ animationDelay: `${index * 100}ms` }}>
+    <Card className={`group relative overflow-hidden border-border/50 hover:border-primary/30 transition-all duration-700 transform hover:scale-105 hover:-translate-y-2 ${
+      project.featured ? 'ring-2 ring-primary/20 bg-gradient-to-br from-card via-card to-primary/5' : 'bg-card'
+    }`} style={{ animationDelay: `${index * 150}ms` }}>
+      
+      {/* Animated background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
+      
+      {/* Geometric decoration */}
+      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-primary opacity-10 transform rotate-45 translate-x-8 -translate-y-8 group-hover:scale-110 transition-transform duration-500" />
+      
       {project.featured && (
-        <div className="absolute top-4 right-4 z-10">
-          <Badge className="bg-gradient-primary text-primary-foreground">Featured</Badge>
+        <div className="absolute top-4 right-4 z-20">
+          <Badge className="bg-gradient-primary text-primary-foreground shadow-glow animate-pulse">
+            ⭐ Featured
+          </Badge>
         </div>
       )}
       
-      <CardHeader className="pb-4">
+      <CardHeader className="relative z-10 pb-4">
         <div className="flex items-start space-x-4">
-          <div className="p-3 bg-gradient-primary rounded-lg shadow-glow">
+          <div className="relative p-4 bg-gradient-primary rounded-xl shadow-glow group-hover:scale-110 transition-all duration-300">
             {project.icon}
+            <div className="absolute inset-0 bg-gradient-primary rounded-xl opacity-0 group-hover:opacity-30 animate-pulse" />
           </div>
           <div className="flex-1">
-            <CardTitle className="text-xl mb-1 group-hover:text-primary transition-colors">
+            <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors duration-300 font-heading">
               {project.title}
             </CardTitle>
-            <CardDescription className="text-muted-foreground font-medium">
+            <CardDescription className="text-muted-foreground font-medium code-style text-sm">
               {project.subtitle}
             </CardDescription>
           </div>
         </div>
       </CardHeader>
       
-      <CardContent className="space-y-4">
-        <p className="text-muted-foreground leading-relaxed">
+      <CardContent className="relative z-10 space-y-6">
+        <p className="text-muted-foreground leading-relaxed text-sm">
           {project.description}
         </p>
         
         <div className="flex flex-wrap gap-2">
-          {project.tech.map((tech: string) => (
-            <Badge key={tech} variant="secondary" className="text-xs">
+          {project.tech.map((tech: string, techIndex: number) => (
+            <Badge 
+              key={tech} 
+              variant="secondary" 
+              className="text-xs hover:bg-primary/20 hover:text-primary transition-all duration-300 cursor-default"
+              style={{ animationDelay: `${techIndex * 50}ms` }}
+            >
               {tech}
             </Badge>
           ))}
         </div>
         
-        <div className="flex items-center justify-between pt-4">
-          <div className="flex items-center space-x-2">
-            <div className={`w-2 h-2 rounded-full ${
-              project.status === 'Live' ? 'bg-success animate-pulse' : 'bg-primary'
+        <div className="flex items-center justify-between pt-4 border-t border-border/50">
+          <div className="flex items-center space-x-3">
+            <div className={`w-3 h-3 rounded-full ${
+              project.status === 'Live' 
+                ? 'bg-success shadow-[0_0_10px_hsl(var(--success))] animate-pulse' 
+                : 'bg-primary shadow-[0_0_8px_hsl(var(--primary))]'
             }`} />
-            <span className="text-sm text-muted-foreground">{project.status}</span>
+            <span className="text-sm font-medium code-style">
+              {project.status === 'Live' ? '🟢 Live' : '🚧 In Progress'}
+            </span>
           </div>
           
           <div className="flex space-x-2">
-            <Button size="sm" variant="ghost" className="h-8 w-8 p-0">
+            <Button 
+              size="sm" 
+              variant="ghost" 
+              className="h-9 w-9 p-0 hover:bg-primary/20 hover:text-primary transition-all duration-300 rounded-lg"
+            >
               <Github className="h-4 w-4" />
             </Button>
-            <Button size="sm" variant="ghost" className="h-8 w-8 p-0">
+            <Button 
+              size="sm" 
+              variant="ghost" 
+              className="h-9 w-9 p-0 hover:bg-primary/20 hover:text-primary transition-all duration-300 rounded-lg"
+            >
               <ExternalLink className="h-4 w-4" />
             </Button>
           </div>
@@ -138,21 +165,40 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Featured Projects</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of AI-powered solutions and creative web experiences
+        <div className="text-center mb-20">
+          <div className="mb-6">
+            <span className="code-style text-primary text-sm animate-fade-in-up">
+              <span className="text-muted-foreground">portfolio.</span>work()
+            </span>
+          </div>
+          <h2 className="text-5xl md:text-7xl font-bold mb-8 shimmer-text font-heading">
+            MY WORK
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A curated collection of <span className="text-primary font-semibold">AI-powered solutions</span> and 
+            <span className="text-primary font-semibold"> creative web experiences</span> that push the boundaries of technology.
           </p>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mt-6" />
+          <div className="flex justify-center mt-8">
+            <div className="w-32 h-1 bg-gradient-primary rounded-full" />
+          </div>
         </div>
 
         {/* AI Projects */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 text-foreground flex items-center">
-            <Brain className="mr-3 h-6 w-6 text-primary" />
-            AI & Machine Learning Projects
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mb-20">
+          <div className="flex items-center mb-12">
+            <div className="p-3 bg-gradient-primary rounded-xl shadow-glow mr-4">
+              <Brain className="h-7 w-7" />
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-foreground font-heading">
+                AI & Machine Learning
+              </h3>
+              <p className="text-muted-foreground code-style text-sm">
+                // Intelligent solutions for real-world problems
+              </p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiProjects.map((project, index) => (
               <div key={project.title} className="animate-fade-in-up">
                 <ProjectCard project={project} index={index} />
@@ -163,14 +209,23 @@ export function ProjectsSection() {
 
         {/* Web Projects */}
         <div>
-          <h3 className="text-2xl font-bold mb-8 text-foreground flex items-center">
-            <Code className="mr-3 h-6 w-6 text-primary" />
-            Web Applications & Platforms
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex items-center mb-12">
+            <div className="p-3 bg-gradient-accent rounded-xl shadow-glow mr-4">
+              <Code className="h-7 w-7" />
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-foreground font-heading">
+                Web Applications & Platforms
+              </h3>
+              <p className="text-muted-foreground code-style text-sm">
+                // Modern web experiences with cutting-edge design
+              </p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {webProjects.map((project, index) => (
               <div key={project.title} className="animate-fade-in-up">
-                <ProjectCard project={project} index={index} />
+                <ProjectCard project={project} index={index + aiProjects.length} />
               </div>
             ))}
           </div>

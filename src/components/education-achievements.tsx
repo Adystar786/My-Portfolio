@@ -45,28 +45,6 @@ export function EducationAchievements() {
               </CardContent>
             </Card>
             
-            <Card className="border-border/50 hover:border-primary/50 transition-all duration-500 card-hover mt-6">
-              <CardHeader className="pb-4">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle className="text-xl mb-2">Master's in Computer Science</CardTitle>
-                    <p className="text-muted-foreground font-medium">AI & Data Science Focus</p>
-                  </div>
-                  <Badge variant="outline">Planning</Badge>
-                </div>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span>Erasmus Mundus / University of Genoa</span>
-                </div>
-                
-                <p className="text-sm text-muted-foreground">
-                  Preparing for advanced studies in AI and Data Science through prestigious European programs
-                </p>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Achievements */}

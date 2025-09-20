@@ -19,30 +19,53 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background/70" />
       </div>
       
-      {/* Floating elements */}
+      {/* 3D Geometric Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-gradient-primary opacity-20 transform rotate-45 geometric-float blur-sm" />
+        <div className="absolute top-1/3 right-1/5 w-24 h-24 bg-primary/30 transform rotate-12 geometric-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-60 h-60 bg-gradient-secondary opacity-15 transform -rotate-45 geometric-float blur-md" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-1/3 left-1/5 w-32 h-32 bg-accent/25 transform rotate-45 geometric-float" style={{ animationDelay: '3s' }} />
+        
+        {/* Floating particles */}
+        <div className="absolute top-1/2 left-1/3 w-2 h-2 bg-primary rounded-full float opacity-60" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-2/3 right-1/3 w-3 h-3 bg-primary-glow rounded-full float opacity-40" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute bottom-1/2 left-2/3 w-1.5 h-1.5 bg-accent rounded-full float opacity-80" style={{ animationDelay: '1.8s' }} />
       </div>
       
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center animate-fade-in-up">
-        <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
-            <span 
-              className="glitch gradient-text cursor-pointer inline-block hover:scale-105 transition-transform duration-300" 
-              data-text="Adnan"
-            >
-              Adnan
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center animate-fade-in-up">
+        <div className="mb-12">
+          <div className="mb-6">
+            <span className="code-style text-primary text-sm animate-slide-in-left">
+              <span className="text-muted-foreground">const</span> developer = {"{"} 
             </span>
-            <span className="text-muted-foreground"> — </span>
+          </div>
+          
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight font-heading">
+            <span 
+              className="glitch shimmer-text cursor-pointer inline-block hover:scale-105 transition-transform duration-300" 
+              data-text="ADNAN"
+            >
+              ADNAN
+            </span>
           </h1>
-          <h2 className="text-2xl md:text-4xl font-light text-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
-            I build <span className="font-semibold gradient-text">AI companions</span>, 
-            <span className="font-semibold gradient-text"> intelligent apps</span>, and 
-            <span className="font-semibold gradient-text"> creative web experiences</span>.
+          
+          <h2 className="text-xl md:text-3xl font-light text-foreground mb-8 max-w-4xl mx-auto leading-relaxed tracking-wide">
+            <span className="code-style text-muted-foreground">name:</span> 
+            <span className="text-primary">"Software Engineer"</span><span className="text-muted-foreground">,</span><br/>
+            <span className="code-style text-muted-foreground">focus:</span> 
+            <span className="gradient-text font-medium">["AI Companions", "Intelligent Apps", "Creative Experiences"]</span><span className="text-muted-foreground">,</span><br/>
+            <span className="code-style text-muted-foreground">passion:</span> 
+            <span className="text-primary">"Human-centered technology"</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          
+          <div className="mb-8 animate-slide-in-right">
+            <span className="code-style text-primary text-sm">
+              <span className="text-muted-foreground">{"}"};  </span>
+            </span>
+          </div>
+          
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Computer Science graduate specializing in AI, Data Science, and human-centered technology.
           </p>
         </div>
