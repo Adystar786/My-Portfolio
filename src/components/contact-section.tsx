@@ -42,14 +42,14 @@ export function ContactSection() {
     },
     {
       name: "GitHub",
-      value: "github.com/adnan",
-      href: "https://github.com/adnan",
+      value: "github.com/Adystar786",
+      href: "https://github.com/Adystar786",
       icon: <Github className="h-5 w-5" />
     },
     {
       name: "LinkedIn",
-      value: "linkedin.com/in/adnan",
-      href: "https://linkedin.com/in/adnan",
+      value: "linkedin.com/in/mohammed-adnan-star",
+      href: "https://www.linkedin.com/in/mohammed-adnan-star",
       icon: <Linkedin className="h-5 w-5" />
     }
   ]

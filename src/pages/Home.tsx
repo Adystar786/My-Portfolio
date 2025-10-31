@@ -51,7 +51,7 @@ export default function Home() {
             </h1>
             
             <h2 className="text-xl md:text-3xl font-light text-foreground mb-8 max-w-4xl mx-auto leading-relaxed tracking-wide">
-              <span className="code-style text-muted-foreground">name:</span> 
+              <span className="code-style text-muted-foreground">qualified:</span> 
               <span className="text-primary">"AI Developer & Machine Learning Engineer"</span><span className="text-muted-foreground">,</span><br/>
               <span className="code-style text-muted-foreground">expertise:</span> 
               <span className="gradient-text font-medium">["AI Chatbots", "Data Science Projects", "Creative Web Applications"]</span><span className="text-muted-foreground">,</span><br/>
