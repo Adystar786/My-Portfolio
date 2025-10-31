@@ -36,20 +36,20 @@ export function ContactSection() {
   const contactLinks = [
     {
       name: "Email",
-      value: "adystar67@gmail.com",
-      href: "mailto:adystar67@gmail.com",
+      value: "adnan@example.com",
+      href: "mailto:adnan@example.com",
       icon: <Mail className="h-5 w-5" />
     },
     {
       name: "GitHub",
-      value: "github.com/Adystar786",
-      href: "https://github.com/Adystar786",
+      value: "github.com/adnan",
+      href: "https://github.com/adnan",
       icon: <Github className="h-5 w-5" />
     },
     {
       name: "LinkedIn",
-      value: "linkedin.com/in/mohammed-adnan-star",
-      href: "https://www.linkedin.com/in/mohammed-adnan-star",
+      value: "linkedin.com/in/adnan",
+      href: "https://linkedin.com/in/adnan",
       icon: <Linkedin className="h-5 w-5" />
     }
   ]

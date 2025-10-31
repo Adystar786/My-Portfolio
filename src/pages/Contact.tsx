@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Mail, MessageSquare, Send, Github, Linkedin } from "lucide-react"
+import { Mail, MessageSquare, Send, Github, Linkedin, Twitter } from "lucide-react"
 
 export default function Contact() {
   return (
@@ -116,7 +116,7 @@ export default function Contact() {
                 <CardContent className="space-y-4">
                   <div className="p-4 bg-gradient-secondary rounded-lg border border-border/50">
                     <p className="text-sm text-muted-foreground mb-1">Email Address</p>
-                    <p className="text-foreground font-medium code-style">adystar67@gmail.com</p>
+                    <p className="text-foreground font-medium code-style">adnan.developer@email.com</p>
                   </div>
                   
                   <div className="p-4 bg-gradient-secondary rounded-lg border border-border/50">
@@ -150,24 +150,22 @@ export default function Contact() {
                 </CardHeader>
                 
                 <CardContent>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-3 gap-4">
                     {[
-                      { icon: <Github className="h-5 w-5" />, label: "GitHub", handle: "Adystar786", link: "https://github.com/Adystar786" },
-                      { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", handle: "mohammed-adnan-star", link: "https://www.linkedin.com/in/mohammed-adnan-star" }
+                      { icon: <Github className="h-5 w-5" />, label: "GitHub", handle: "@adnan-dev" },
+                      { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", handle: "/in/adnan-ai" },
+                      { icon: <Twitter className="h-5 w-5" />, label: "Twitter", handle: "@adnan_ai_dev" }
                     ].map((social) => (
                       <Button 
                         key={social.label}
                         variant="outline" 
                         className="flex flex-col items-center space-y-2 h-auto py-4 border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
-                        asChild
                       >
-                        <a href={social.link} target="_blank" rel="noopener noreferrer">
-                          {social.icon}
-                          <div className="text-center">
-                            <p className="text-xs font-medium">{social.label}</p>
-                            <p className="text-xs text-muted-foreground code-style">@{social.handle}</p>
-                          </div>
-                        </a>
+                        {social.icon}
+                        <div className="text-center">
+                          <p className="text-xs font-medium">{social.label}</p>
+                          <p className="text-xs text-muted-foreground code-style">{social.handle}</p>
+                        </div>
                       </Button>
                     ))}
                   </div>
