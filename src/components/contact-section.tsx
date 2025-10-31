@@ -36,8 +36,8 @@ export function ContactSection() {
   const contactLinks = [
     {
       name: "Email",
-      value: "adnan@example.com",
-      href: "mailto:adnan@example.com",
+      value: "adystar67@gmail.com",
+      href: "mailto:adystar67@gmail.com",
       icon: <Mail className="h-5 w-5" />
     },
     {

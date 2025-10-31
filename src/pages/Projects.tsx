@@ -48,7 +48,7 @@ export default function Projects() {
       subtitle: "AI Assistant with Computer Vision",
       description: "A voice-controlled AI assistant featuring advanced computer vision capabilities. Marvin can detect and identify objects in real-time, respond to voice commands, and provide intelligent assistance through seamless integration of speech recognition and visual processing.",
       icon: <Eye className="h-6 w-6" />,
-      tech: ["Python", "OpenCV", "Speech Recognition", "Computer Vision", "AI"],
+      tech: ["JavaScript", "OpenCV", "Speech Recognition", "Computer Vision", "AI"],
       status: "Live",
       link: "https://marvin-ai.netlify.app/",
       github: "https://github.com/Adystar786"
@@ -241,32 +241,8 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Research Projects */}
-          <div className="mb-20">
-            <div className="flex items-center mb-12">
-              <div className="p-3 bg-gradient-accent rounded-xl shadow-glow mr-4">
-                <Eye className="h-7 w-7" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-foreground font-heading">
-                  Research Projects
-                </h2>
-                <p className="text-muted-foreground code-style text-sm">
-                  // Academic research and experimental studies
-                </p>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {researchProjects.map((project, index) => (
-                <div key={project.title} className="animate-fade-in-up">
-                  <ProjectCard project={project} index={index + aiProjects.length} />
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Web Projects */}
-          <div>
+          <div className="mb-20">
             <div className="flex items-center mb-12">
               <div className="p-3 bg-gradient-accent rounded-xl shadow-glow mr-4">
                 <Code className="h-7 w-7" />
@@ -283,7 +259,31 @@ export default function Projects() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {webProjects.map((project, index) => (
                 <div key={project.title} className="animate-fade-in-up">
-                  <ProjectCard project={{...project, github: undefined}} index={index + aiProjects.length + researchProjects.length} />
+                  <ProjectCard project={{...project, github: undefined}} index={index + aiProjects.length} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Research Projects */}
+          <div>
+            <div className="flex items-center mb-12">
+              <div className="p-3 bg-gradient-accent rounded-xl shadow-glow mr-4">
+                <Eye className="h-7 w-7" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-foreground font-heading">
+                  Research Projects
+                </h2>
+                <p className="text-muted-foreground code-style text-sm">
+                  // Academic research and experimental studies
+                </p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {researchProjects.map((project, index) => (
+                <div key={project.title} className="animate-fade-in-up">
+                  <ProjectCard project={project} index={index + aiProjects.length + webProjects.length} />
                 </div>
               ))}
             </div>
