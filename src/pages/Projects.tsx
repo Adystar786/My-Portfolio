@@ -8,11 +8,13 @@ export default function Projects() {
     {
       title: "Furina AI",
       subtitle: "Mental Health AI Companion",
-      description: "An intelligent AI chatbot that listens, provides emotional support, and tracks mood patterns to promote mental well-being through natural language processing and machine learning algorithms.",
+      description: "An empathetic AI companion designed to provide emotional support and mental wellness guidance. Furina AI uses advanced natural language processing to understand and respond to users' emotional states, offering a safe space for mental health conversations.",
       icon: <Brain className="h-6 w-6" />,
       tech: ["Python", "NLP", "TensorFlow", "Firebase", "Machine Learning"],
       status: "Live",
       featured: true,
+      link: "https://furinacompanion.site",
+      github: "https://github.com/Adystar786",
       schema: {
         "@type": "SoftwareApplication",
         "name": "Furina AI",
@@ -22,36 +24,46 @@ export default function Projects() {
       }
     },
     {
-      title: "Marvin",
-      subtitle: "AI Assistant with Computer Vision",
-      description: "Voice-controlled AI assistant with advanced object detection capabilities, combining speech recognition with computer vision for intelligent environment interaction.",
-      icon: <Eye className="h-6 w-6" />,
-      tech: ["Python", "OpenCV", "Speech Recognition", "Computer Vision", "AI"],
-      status: "Live"
-    },
-    {
-      title: "Raiden AI",
-      subtitle: "Academic AI Assistant",
-      description: "Intelligent academic support AI that helps students organize study resources, answer complex questions, and summarize educational content using advanced NLP techniques.",
-      icon: <BookOpen className="h-6 w-6" />,
-      tech: ["Python", "NLP", "Flask", "SQLite", "Machine Learning"],
-      status: "Live"
+      title: "Homie AI",
+      subtitle: "Evolving AI Companion",
+      description: "An innovative AI companion that gradually evolves through user interactions, adapting its personality and responses based on conversations. Homie AI learns from each interaction to provide increasingly personalized and meaningful experiences.",
+      icon: <Brain className="h-6 w-6" />,
+      tech: ["Python", "Machine Learning", "NLP", "AI", "Flask"],
+      status: "Live",
+      link: "https://homie-ai-companion.onrender.com",
+      github: "https://github.com/Adystar786"
     },
     {
       title: "TripStar AI",
       subtitle: "Smart Travel Itinerary Generator",
-      description: "AI-powered travel planning application that creates personalized itineraries based on user preferences, budget, and interests using machine learning algorithms.",
+      description: "An intelligent travel planning application that generates personalized itineraries using AI. TripStar analyzes your preferences, budget, and travel style to create detailed day-by-day plans, suggesting activities, restaurants, and optimal routes.",
       icon: <MapPin className="h-6 w-6" />,
       tech: ["React", "Python", "OpenAI API", "Firebase", "Data Science"],
-      status: "In Progress"
+      status: "Live",
+      link: "https://tripstar-ai-based-itinerary-generator.onrender.com/",
+      github: "https://github.com/Adystar786"
     },
     {
-      title: "Halal It",
-      subtitle: "AI Order Checker",
-      description: "Automated food delivery verification for Halal compliance.",
-      icon: <ShieldCheck className="h-6 w-6" />,
-      tech: ["React Native", "Python", "Computer Vision", "API"],
-      status: "In Progress"
+      title: "Marvin",
+      subtitle: "AI Assistant with Computer Vision",
+      description: "A voice-controlled AI assistant featuring advanced computer vision capabilities. Marvin can detect and identify objects in real-time, respond to voice commands, and provide intelligent assistance through seamless integration of speech recognition and visual processing.",
+      icon: <Eye className="h-6 w-6" />,
+      tech: ["JavaScript", "OpenCV", "Speech Recognition", "Computer Vision", "AI"],
+      status: "Live",
+      link: "https://marvin-ai.netlify.app/",
+      github: "https://github.com/Adystar786"
+    }
+  ]
+
+  const researchProjects = [
+    {
+      title: "Speed of Eye (SOE)",
+      subtitle: "Visual Processing Research",
+      description: "Research project investigating human visual processing speed and perception patterns. This study explores how quickly the human eye can process and interpret visual information, with applications in UI/UX design and accessibility.",
+      icon: <Eye className="h-6 w-6" />,
+      tech: ["Research", "Data Analysis", "Psychology", "HCI", "Neuroscience"],
+      status: "Research",
+      github: "https://github.com/Adystar786"
     }
   ]
 
@@ -59,26 +71,29 @@ export default function Projects() {
     {
       title: "Shroom's Rain Cloud",
       subtitle: "E-commerce Platform",
-      description: "Beautiful responsive e-commerce website for artistic lighting products, featuring modern web development with seamless user experience and secure payment integration.",
+      description: "A beautifully crafted e-commerce platform for artistic cloud-shaped rain lamps. Features a modern, responsive design with seamless checkout experience, product customization options, and integrated payment processing for unique lighting products.",
       icon: <ShoppingBag className="h-6 w-6" />,
       tech: ["React", "Node.js", "Stripe", "MongoDB", "Web Development"],
-      status: "Live"
+      status: "Live",
+      link: "https://shrooms-rain-cloud.company.site/"
     },
     {
       title: "NeoBands",
       subtitle: "Wearable Tech E-commerce",
-      description: "Modern e-commerce platform specializing in cutting-edge wearable technology, built with React and featuring advanced web development techniques.",
+      description: "A sleek e-commerce platform specializing in modern wearable technology and smart bands. Built with React and featuring an intuitive shopping experience, product comparisons, and secure payment gateway integration for tech enthusiasts.",
       icon: <Zap className="h-6 w-6" />,
       tech: ["React", "Firebase", "Tailwind CSS", "Payment Gateway", "Web Development"],
-      status: "Live"
+      status: "Live",
+      link: "https://neo-bands.company.site/"
     },
     {
       title: "Matrix Webpage",
       subtitle: "Visual Showcase",
-      description: "Interactive visual experience with Matrix-inspired animations and effects.",
+      description: "An immersive visual experience featuring Matrix-inspired animations and effects. Built with pure JavaScript and Canvas API, this project showcases advanced animation techniques and creates the iconic digital rain effect with smooth performance.",
       icon: <Code className="h-6 w-6" />,
       tech: ["JavaScript", "CSS3", "Canvas API", "WebGL"],
-      status: "Live"
+      status: "Live",
+      link: "https://singular-pony-ee4749.netlify.app"
     }
   ]
 
@@ -144,25 +159,35 @@ export default function Projects() {
                 : 'bg-primary shadow-[0_0_8px_hsl(var(--primary))]'
             }`} />
             <span className="text-sm font-medium code-style">
-              {project.status === 'Live' ? '🟢 Live' : '🚧 In Progress'}
+              {project.status === 'Live' ? 'Live' : project.status === 'Research' ? 'Research' : 'In Progress'}
             </span>
           </div>
           
           <div className="flex space-x-2">
-            <Button 
-              size="sm" 
-              variant="ghost" 
-              className="h-9 w-9 p-0 hover:bg-primary/20 hover:text-primary transition-all duration-300 rounded-lg"
-            >
-              <Github className="h-4 w-4" />
-            </Button>
-            <Button 
-              size="sm" 
-              variant="ghost" 
-              className="h-9 w-9 p-0 hover:bg-primary/20 hover:text-primary transition-all duration-300 rounded-lg"
-            >
-              <ExternalLink className="h-4 w-4" />
-            </Button>
+            {project.github && (
+              <Button 
+                size="sm" 
+                variant="ghost" 
+                className="h-9 w-9 p-0 hover:bg-primary/20 hover:text-primary transition-all duration-300 rounded-lg"
+                asChild
+              >
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="h-4 w-4" />
+                </a>
+              </Button>
+            )}
+            {project.link && (
+              <Button 
+                size="sm" 
+                variant="ghost" 
+                className="h-9 w-9 p-0 hover:bg-primary/20 hover:text-primary transition-all duration-300 rounded-lg"
+                asChild
+              >
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            )}
           </div>
         </div>
       </CardContent>
@@ -217,7 +242,7 @@ export default function Projects() {
           </div>
 
           {/* Web Projects */}
-          <div>
+          <div className="mb-20">
             <div className="flex items-center mb-12">
               <div className="p-3 bg-gradient-accent rounded-xl shadow-glow mr-4">
                 <Code className="h-7 w-7" />
@@ -234,7 +259,31 @@ export default function Projects() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {webProjects.map((project, index) => (
                 <div key={project.title} className="animate-fade-in-up">
-                  <ProjectCard project={project} index={index + aiProjects.length} />
+                  <ProjectCard project={{...project, github: undefined}} index={index + aiProjects.length} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Research Projects */}
+          <div>
+            <div className="flex items-center mb-12">
+              <div className="p-3 bg-gradient-accent rounded-xl shadow-glow mr-4">
+                <Eye className="h-7 w-7" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-foreground font-heading">
+                  Research Projects
+                </h2>
+                <p className="text-muted-foreground code-style text-sm">
+                  // Academic research and experimental studies
+                </p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {researchProjects.map((project, index) => (
+                <div key={project.title} className="animate-fade-in-up">
+                  <ProjectCard project={project} index={index + aiProjects.length + webProjects.length} />
                 </div>
               ))}
             </div>

@@ -39,7 +39,7 @@ export function AboutSection() {
               
               <p className="text-muted-foreground">
                 When I'm not coding <strong className="text-primary">AI portfolio projects</strong>, you'll find me exploring the intersection of 
-                <strong className="text-foreground"> storytelling</strong>, <strong className="text-foreground">directing</strong>, and 
+                <strong className="text-foreground">storytelling</strong>, <strong className="text-foreground">directing</strong>, and 
                 <strong className="text-foreground">space technology</strong> — always seeking to push the boundaries of what's possible.
               </p>
             </div>
