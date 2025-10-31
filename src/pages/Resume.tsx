@@ -74,7 +74,7 @@ export default function Resume() {
                 <p className="text-muted-foreground leading-relaxed">
                   Currently pursuing <strong className="text-primary">Bachelor's of Computer Applications</strong> with a focus on 
                   <strong className="text-foreground"> Artificial Intelligence</strong>, <strong className="text-foreground">Machine Learning</strong>, 
-                  and <strong className="text-foreground">Software Development</strong>. Graduating in 2025 with comprehensive knowledge in 
+                  and <strong className="text-foreground">Software Development</strong>. Graduated in 2025 with comprehensive knowledge in 
                   computer science fundamentals, programming languages, and advanced AI technologies.
                 </p>
                 
