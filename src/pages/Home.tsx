@@ -54,7 +54,7 @@ export default function Home() {
               <span className="code-style text-muted-foreground">qualified:</span> 
               <span className="text-primary">"AI Developer & Machine Learning Engineer"</span><span className="text-muted-foreground">,</span><br/>
               <span className="code-style text-muted-foreground">expertise:</span> 
-              <span className="gradient-text font-medium">["AI Chatbots", "Data Science Projects", "Creative Web Applications"]</span><span className="text-muted-foreground">,</span><br/>
+              <span className="gradient-text font-medium">["AI Applications", "Data Science Projects", "Creative Web Apps"]</span><span className="text-muted-foreground">,</span><br/>
               <span className="code-style text-muted-foreground">mission:</span> 
               <span className="text-primary">"Building intelligent solutions with human-centered design"</span>
             </h2>
