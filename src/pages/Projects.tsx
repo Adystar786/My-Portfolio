@@ -206,6 +206,7 @@ export default function Projects() {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 shimmer-text font-heading">
               My Works
+
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A curated collection of <span className="text-primary font-semibold">AI-powered solutions</span>, 
