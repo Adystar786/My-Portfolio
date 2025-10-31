@@ -70,11 +70,6 @@ export function AboutSection() {
                 
                 <div className="space-y-4">
                   <div className="p-4 bg-gradient-secondary rounded-lg border border-border/50">
-                    <h4 className="font-semibold text-foreground mb-2">TripStar AI</h4>
-                    <p className="text-sm text-muted-foreground">AI-powered travel planning with machine learning</p>
-                  </div>
-                  
-                  <div className="p-4 bg-gradient-secondary rounded-lg border border-border/50">
                     <h4 className="font-semibold text-foreground mb-2">Halal It</h4>
                     <p className="text-sm text-muted-foreground">Computer vision for automated food verification</p>
                   </div>
